@@ -1,21 +1,21 @@
 <template>
-    <div class="home">
-        <h1>Welcome to TeamCollab</h1>
-        <router-view />
-    </div>
+    <nav>
+    <router-link to="/home">Home</router-link>
+  </nav>
+    <RouterView/>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
+<script setup lang="ts">
 
-export default defineComponent({
-    name: 'Home',
-});
 </script>
 
 <style scoped>
-.home {
-    padding: 2rem;
-    text-align: center;
+nav {
+  padding: 1em;
+  background-color: #f5f5f5;
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  margin-bottom: 2em;
 }
 </style>

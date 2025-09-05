@@ -3,8 +3,9 @@ import Home from '../views/Home.vue'
 
 
 const routes = [
-  { path: '/', name: 'Home', component: Home },
-
+  {path: '/', redirect: '/login' },
+  { path: '/home', name: 'Home', component: Home },
+  { path: '/login', name: 'Login', component: () => import('../views/LoginView.vue') },
 ]
 
 const router = createRouter({
