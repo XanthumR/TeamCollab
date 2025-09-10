@@ -19,9 +19,9 @@
     :class="msg.user === 'Kullanıcı1' ? 'ml-auto' : 'mr-auto'"
     outlined
   >
-    <v-card-title class="text-blue-accent-2 bg-grey-darken-2">
+    <v-card-text class="text-blue-accent-2 bg-grey-darken-2 pa-2">
       {{ new Date(msg.id).toLocaleString().slice(0, 16) }}
-    </v-card-title>
+    </v-card-text>
     <v-sheet class="d-flex pa-2" color="grey-darken-4" rounded>
       <v-avatar size="40" class="align-self-start">
       <v-img :src="`https://randomuser.me/api/portraits/men/${msg.user.charAt(msg.user.length - 1)}.jpg`" />
