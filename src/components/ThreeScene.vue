@@ -1,5 +1,4 @@
 <template>
-  <!-- Fullscreen background canvas -->
   <div ref="container" class="fixed inset-0 -z-10 w-full h-full"></div>
 </template>
 

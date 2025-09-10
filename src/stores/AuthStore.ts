@@ -1,6 +1,11 @@
 
 import { defineStore } from "pinia";
 
+
+
+// email: john@mail.com
+// password: changeme
+
 export const useAuthStore = defineStore("auth", {
   state: () => ({
     email: null as string | null,

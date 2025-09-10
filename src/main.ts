@@ -19,5 +19,8 @@ const vuetify = createVuetify({
   components,
   directives,
 })
-
-createApp(App).use(vuetify).use(router).use(pinia).mount('#app')
+const app = createApp(App)
+app.use(pinia)
+app.use(vuetify)
+app.use(router)
+app.mount('#app')

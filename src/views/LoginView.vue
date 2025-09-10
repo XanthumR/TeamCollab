@@ -1,6 +1,7 @@
 <template>
     <ThreeScene>
   </ThreeScene>
+  
   <v-container fluid style=" position: absolute; top: 0; left: 0; width: 100%; height: 100%;" class=" justify-center align-center fill-height">
     <v-row>
       <v-col md="4" class="mx-auto">
@@ -76,7 +77,6 @@ const rules = computed(() => {
 
 const v$ = useVuelidate(rules, form)
 
-v$.value.$validate();
 
 const login = async () => {
   const result = await v$.value.$validate();
