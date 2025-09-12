@@ -15,7 +15,7 @@
   <v-card
     v-for="msg in channel?.messages"
     :key="msg.id"
-    class="mb-2 w-25 rounded-xl mt-8 bg-grey-darken-2 "
+    class="mb-2 w-25 rounded-xl mt-8 bg-grey-darken-2 fade-in-animation"
     :class="msg.user === 'Kullanıcı1' ? 'ml-auto' : 'mr-auto'"
     outlined
   >
@@ -44,6 +44,7 @@
       color="grey-darken-3"
       style="position: sticky; bottom: 0; z-index: 10;"
     >
+    <v-icon size="45" class="mr-2">mdi-emoticon</v-icon>
       <v-text-field
         v-model="newMessage"
         placeholder="Mesaj yaz..."
@@ -58,9 +59,11 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed,nextTick } from "vue";
+import { ref, computed } from "vue";
 import { useRoute } from "vue-router";
 import { useChannelStore } from "../stores/channelStore";
+
+
 
 const store = useChannelStore();
 const route = useRoute();
@@ -85,3 +88,20 @@ function send() {
 
 
 </script>
+
+<style>
+.fade-in-animation {
+  animation: fadeInDown 0.5s ease-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>

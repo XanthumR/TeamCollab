@@ -87,7 +87,7 @@ const login = async () => {
       authStore.login(form.value.email, response.data.access_token);
       console.log(authStore.email);
       alert('Login successful!');
-      router.push('/home');
+      router.push('/Welcome');
     })
     .catch(error => {
       console.error('Login failed:', error);
