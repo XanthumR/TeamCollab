@@ -26,3 +26,14 @@ Team Collaboration Tool
 
 # Settings Page
 ![image alt](https://github.com/XanthumR/TeamCollab/blob/main/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202025-09-12%20195533.png?raw=true)
+
+
+
+# Functionality
+
+- You can display the messages of a message channel by clicking it
+- If you want to join a voice channel you can do it by clicking the voice channel
+- You can send messages to the message channels
+# Login information
+- email: john@mail.com
+- password: changeme
