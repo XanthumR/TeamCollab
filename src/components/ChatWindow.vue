@@ -26,7 +26,7 @@
       <v-avatar size="40" class="align-self-start">
       <v-img :src="`https://randomuser.me/api/portraits/men/${msg.user.charAt(msg.user.length - 1)}.jpg`" />
     </v-avatar>
-    <v-card-text style="white-space: normal; word-break: break-word;">
+    <v-card-text style="white-space: normal; word-break: break-word;" data-testid="message-text">
       <strong class="text-blue-accent-2">{{ msg.user }}:</strong>
       {{ msg.text }}
     </v-card-text>

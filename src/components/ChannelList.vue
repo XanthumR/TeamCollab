@@ -2,7 +2,7 @@
   <v-navigation-drawer
     app
     class="text-white bg-grey-darken-4"
-    :location="$vuetify.display.mobile ? 'bottom' : undefined"
+
   >
   <v-card class="d-flex align-center bg-grey-darken-4 hover-scale-icon">
         <v-icon class="ml-2" color="white">mdi-home</v-icon>
@@ -36,11 +36,11 @@
         @click="joinVoiceChannel(ch.id)"
         class="rounded-lg hover-scale-icon "
         color="white"
-
+        data-testid="list-item"
       >
-      <v-card color="grey" hover  class="pa-2 d-flex align-center " outlined>
+      <v-card color="grey" hover  class="pa-2 d-flex align-center " outlined >
         <v-icon class="hover-scale"  start>mdi-volume-high</v-icon>
-        <v-list-item-title>{{ ch.name }}</v-list-item-title>
+        <v-list-item-title>{{ ch.name}}</v-list-item-title>
       </v-card>
       <v-list nav>
         <v-list-item
@@ -68,14 +68,15 @@
         outlined
         style="position: sticky; bottom: 0; z-index: 10;"
       >
-      <div @click="leaveVoiceChannel(voiceStore.currentChannelId)">
+      <v-btn @click="leaveVoiceChannel(voiceStore.currentChannelId)" class="ma-2" color="red" outlined role="button">
         <v-icon class="ml-2 cursor-pointer" color="white" >mdi-logout</v-icon>
         <span>Leave Channel</span>
-      </div>
+      </v-btn >
         <v-avatar size="50" class="ml-auto mr-4 mt-2 mb-2" @click="$router.push({ name: 'Profile' })">
           <v-img src="https://randomuser.me/api/portraits/men/1.jpg" />
         </v-avatar>
       </v-card>
+      
 
   </v-navigation-drawer>
 

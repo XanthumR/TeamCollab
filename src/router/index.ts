@@ -1,9 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/Home.vue'
 import { useAuthStore } from '../stores/AuthStore'
 
 const routes = [
-  { path: '/home', name: 'Home', component: Home },
   { path: '/login', name: 'Login', component: () => import('../views/LoginView.vue') },
   { path: '/tasks', name: 'TaskBoard', component: () => import('../views/TaskView.vue') },
   { path: "/channel/:id", name: "Channel", component: () => import('../views/ChannelView.vue') },
