@@ -17,7 +17,7 @@ const router = createRouter({
 
 
 // Add a router guard
-router.beforeEach((to, from, next) => {
+router.beforeEach((to, _, next) => {
   const authStore = useAuthStore();
   const isLoggedIn = authStore.token !== null && authStore.token !== '';
 
